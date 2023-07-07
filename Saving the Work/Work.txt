@@ -1,0 +1,536 @@
+ ashish  ~  cd G
+GLOBIGNORE  GROUPS      Git/
+ ashish  ~  cd Git/
+/home/ashish/Git
+ ashish   master  ~/Git  ls
+1.py
+ ashish   master  ~/Git  git status
+On branch master
+nothing to commit, working tree clean
+ ashish   master  ~/Git  ls
+1.py
+ ashish   master  ~/Git  vim commit_script.sh
+ ashish   master ?:1  ~/Git  mv commit_script.sh commit_everything_script.sh
+renamed 'commit_script.sh' -> 'commit_everything_script.sh'
+ ashish   master ?:1  ~/Git  git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commit_everything_script.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+ ashish   master ?:1  ~/Git  git add commit_everything_script.sh
+ ashish   master S:1  ~/Git  ./commit_everything_script.sh
+-bash: ./commit_everything_script.sh: Permission denied
+ ashish   master S:1  ~/Git  126  ll
+total 8.0K
+drwxr-xr-x 8 ashish ashish 4.0K Jul  7 15:27 .git/
+-rw-r--r-- 1 ashish ashish    0 Jul  6 21:44 1.py
+-rw-r--r-- 1 ashish ashish   59 Jul  7 15:25 commit_everything_script.sh
+ ashish   master S:1  ~/Git  chmod 744 commit_everything_script.sh
+ ashish   master S:1 U:1  ~/Git  ./commit_everything_script.sh
+[master d604cb7] Added Everything
+ 1 file changed, 4 insertions(+)
+ create mode 100755 commit_everything_script.sh
+ ashish   master  ~/Git  git ststus
+git: 'ststus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+ ashish   master  ~/Git  1  git status
+On branch master
+nothing to commit, working tree clean
+ ashish   master  ~/Git  git log --oneline
+ ashish   master  ~/Git  git log --oneline
+ ashish   master  ~/Git  ls
+1.py  commit_everything_script.sh
+ ashish   master  ~/Git  ll
+total 8.0K
+drwxr-xr-x 8 ashish ashish 4.0K Jul  7 23:01 .git/
+-rw-r--r-- 1 ashish ashish    0 Jul  6 21:44 1.py
+-rwxr--r-- 1 ashish ashish   59 Jul  7 15:25 commit_everything_script.sh*
+ ashish   master  ~/Git  vim 1.py
+ ashish   master  ~/Git  cd
+ ashish  ~  nvim
+ ashish  ~  cd G
+GLOBIGNORE  GROUPS      Git/
+ ashish  ~  cd G
+-bash: cd: G: No such file or directory
+ ashish  ~  cd G
+GLOBIGNORE  GROUPS      Git/
+ ashish  ~  cd Git/
+/home/ashish/Git
+ ashish   master  ~/Git  vim 1.py
+ ashish   master U:1  ~/Git  cd
+ ashish  ~  vim
+ ashish  ~  cd G
+GLOBIGNORE  GROUPS      Git/
+ ashish  ~  cd Git/
+/home/ashish/Git
+ ashish   master U:1  ~/Git  git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   1.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ ashish   master U:1  ~/Git  git commit . -m "modified 1.py"
+[master b37b901] modified 1.py
+ 1 file changed, 3 insertions(+)
+ ashish   master  ~/Git  git status
+On branch master
+nothing to commit, working tree clean
+ ashish   master  ~/Git  touch 2.py
+ ashish   master ?:1  ~/Git  vim 2.py
+ ashish   master ?:1  ~/Git  git add 2.py
+ ashish   master S:1  ~/Git  git commit -m "Added 2.py"
+[master 44cabc5] Added 2.py
+ 1 file changed, 1 insertion(+)
+ create mode 100644 2.py
+ ashish   master  ~/Git  git status
+On branch master
+nothing to commit, working tree clean
+ ashish   master  ~/Git  git log --oneline
+ ashish   master  ~/Git  git show 44cabc5
+ ashish   master  ~/Git  vim 2.py
+ ashish   master U:1  ~/Git  git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   2.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ ashish   master U:1  ~/Git  git commit -a
+Aborting commit due to empty commit message.
+ ashish   master U:1  ~/Git  1  git commit -am "Modified 2.py"
+[master dc9fcf7] Modified 2.py
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+ ashish   master  ~/Git  git status
+On branch master
+nothing to commit, working tree clean
+ ashish   master  ~/Git  git log --oneline
+ ashish   master  ~/Git  git log --pretty --oneline
+ ashish   master  ~/Git  vim ~/.bash
+.bash_history                      .bash_logout                       .bashrc                            .bashrc.omb-backup-20230706223950
+ ashish   master  ~/Git  vim ~/.bashrc
+ ashish   master  ~/Git  cd
+ ashish  ~  ll
+total 72K
+-rw-------  1 ashish ashish 3.9K Jul  7 23:39 .bash_history
+-rw-r--r--  1 ashish ashish  220 Jul  6 21:02 .bash_logout
+-rw-r--r--  1 ashish ashish 4.9K Jul  6 23:00 .bashrc
+-rw-r--r--  1 ashish ashish 3.7K Jul  6 21:12 .bashrc.omb-backup-20230706223950
+drwx------  3 ashish ashish 4.0K Jul  6 21:17 .cache/
+drwxr-xr-x  4 ashish ashish 4.0K Jul  6 21:42 .config/
+-rw-r--r--  1 ashish ashish   54 Jul  6 21:46 .gitconfig
+-rw-------  1 ashish ashish   20 Jul  7 23:39 .lesshst
+drwx------  4 ashish ashish 4.0K Jul  6 21:17 .local/
+-rw-r--r--  1 ashish ashish    0 Jul  7 00:04 .motd_shown
+drwxr-xr-x 15 ashish ashish 4.0K Jul  6 22:39 .oh-my-bash/
+-rw-r--r--  1 ashish ashish   17 Jul  6 22:39 .osh-update
+-rw-r--r--  1 ashish ashish  807 Jul  6 21:02 .profile
+-rw-r--r--  1 ashish ashish    0 Jul  7 14:36 .sdirs
+-rw-r--r--  1 ashish ashish    0 Jul  6 21:02 .sudo_as_admin_successful
+-rw-------  1 ashish ashish  700 Jul  6 22:54 .viminfo
+-rw-r--r--  1 ashish ashish  180 Jul  6 22:39 .wget-hsts
+drwxr-xr-x  3 ashish ashish 4.0K Jul  7 23:25 Git/
+drwxr-xr-x  3 ashish ashish 4.0K Jul  6 23:05 LearningPython/
+drwx------  3 ashish ashish 4.0K Jul  6 21:16 snap/
+ ashish  ~  cd .oh-my-bash/
+/home/ashish/.oh-my-bash
+l ashish   master U:1  ~/.oh-my-bash  ll
+total 104K
+-rw-r--r--  1 ashish ashish  355 Jul  6 22:39 .editorconfig
+drwxr-xr-x  8 ashish ashish 4.0K Jul  7 23:39 .git/
+-rw-r--r--  1 ashish ashish  108 Jul  6 22:39 .git-blame-ignore-revs
+drwxr-xr-x  3 ashish ashish 4.0K Jul  6 22:39 .github/
+-rw-r--r--  1 ashish ashish  294 Jul  6 22:39 .gitignore
+-rw-r--r--  1 ashish ashish   78 Jul  6 22:39 .shellcheckrc
+-rw-r--r--  1 ashish ashish 3.2K Jul  6 22:39 CODE_OF_CONDUCT.md
+-rw-r--r--  1 ashish ashish 5.2K Jul  6 22:39 CONTRIBUTING.md
+-rw-r--r--  1 ashish ashish 1.3K Jul  6 22:39 LICENSE.md
+-rw-r--r--  1 ashish ashish  11K Jul  6 22:39 README.md
+drwxr-xr-x  2 ashish ashish 4.0K Jul  7 14:35 aliases/
+drwxr-xr-x  2 ashish ashish 4.0K Jul  6 22:39 cache/
+drwxr-xr-x  2 ashish ashish 4.0K Jul  6 22:39 completions/
+drwxr-xr-x  6 ashish ashish 4.0K Jul  6 22:39 custom/
+drwxr-xr-x  2 ashish ashish 4.0K Jul  6 22:39 img/
+drwxr-xr-x  2 ashish ashish 4.0K Jul  6 22:39 lib/
+drwxr-xr-x  2 ashish ashish 4.0K Jul  7 14:36 log/
+-rw-r--r--  1 ashish ashish 5.7K Jul  6 22:39 oh-my-bash.sh
+drwxr-xr-x 25 ashish ashish 4.0K Jul  6 22:39 plugins/
+drwxr-xr-x  2 ashish ashish 4.0K Jul  6 22:39 templates/
+drwxr-xr-x 71 ashish ashish 4.0K Jul  6 22:39 themes/
+drwxr-xr-x  2 ashish ashish 4.0K Jul  6 22:39 tools/
+ ashish   master U:1  ~/.oh-my-bash  cd aliases/
+/home/ashish/.oh-my-bash/aliases
+ ashish   master U:1  ~/.oh-my-bash/aliases  ll
+total 44K
+-rw-r--r-- 1 ashish ashish 7.8K Jul  6 22:39 README.md
+-rw-r--r-- 1 ashish ashish  800 Jul  6 22:39 chmod.aliases.sh
+-rw-r--r-- 1 ashish ashish  751 Jul  6 22:39 debian.aliases.bash
+-rw-r--r-- 1 ashish ashish 1.2K Jul  6 22:39 docker.aliases.sh
+-rw-r--r-- 1 ashish ashish 3.0K Jul  7 14:35 general.aliases.sh
+-rw-r--r-- 1 ashish ashish 1.3K Jul  6 22:39 ls.aliases.sh
+-rw-r--r-- 1 ashish ashish 5.3K Jul  6 22:39 misc.aliases.sh
+-rw-r--r-- 1 ashish ashish 2.8K Jul  6 22:39 package-manager.aliases.bash
+-rw-r--r-- 1 ashish ashish  176 Jul  6 22:39 terraform.aliases.sh
+ ashish   master U:1  ~/.oh-my-bash/aliases  vim general.aliases.sh
+ ashish   master U:1  ~/.oh-my-bash/aliases  cd ..
+ ashish   master U:1  ~/.oh-my-bash  cd
+ ashish  ~  cd .oh-my-bash/
+/home/ashish/.oh-my-bash
+ ashish   master U:1  ~/.oh-my-bash  git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   aliases/general.aliases.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ ashish   master U:1  ~/.oh-my-bash  git commit -m "Added alias for vim -> nvim"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   aliases/general.aliases.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ ashish   master U:1  ~/.oh-my-bash  1  git add .
+ ashish   master S:1  ~/.oh-my-bash  git commit -m "Added alias for vim -> nvim"
+[master fb18205] Added alias for vim -> nvim
+ 1 file changed, 1 insertion(+)
+ ashish   master ↑1  ~/.oh-my-bash  git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+ ashish   master ↑1  ~/.oh-my-bash  cd
+ ashish  ~  cd Git/
+/home/ashish/Git
+ ashish   master  ~/Git  ls
+1.py  2.py  commit_everything_script.sh
+ ashish   master  ~/Git  vim .gitignore
+ ashish   master ?:1  ~/Git  ls
+1.py  2.py  commit_everything_script.sh
+ ashish   master ?:1  ~/Git  git add .
+ ashish   master S:1  ~/Git  git commit -m "Created .gitignore file."
+[master 835b50f] Created .gitignore file.
+ 1 file changed, 3 insertions(+)
+ create mode 100644 .gitignore
+ ashish   master  ~/Git  git status
+On branch master
+nothing to commit, working tree clean
+ ashish   master  ~/Git  git log
+ ashish   master  ~/Git  git log --oneline
+ ashish   master  ~/Git  vim
+ ashish   master  ~/Git  vim
+ ashish   master  ~/Git  history
+    1  2023-07-07 12:41:47 reboot
+    2  2023-07-07 12:41:47 sudo reboot
+    3  2023-07-07 12:41:47 systectl list-unit-files --type=service
+    4  2023-07-07 12:41:47 systemctl list-unit-files --type=service
+    5  2023-07-07 12:41:47 ls
+    6  2023-07-07 12:41:47 sudo nano .bashrc
+    7  2023-07-07 12:41:47 sudo apt install neofetch
+    8  2023-07-07 12:41:47 sudo apt update && sudo apt upgrade
+    9  2023-07-07 12:41:47 sudo apt install neofetch
+   10  2023-07-07 12:41:47 sudo snap install neovim
+   11  2023-07-07 12:41:47 sudo snap install nvim
+   12  2023-07-07 12:41:47 sudo snap install nvim --classic
+   13  2023-07-07 12:41:47 git --version
+   14  2023-07-07 12:41:47 python3 -V
+   15  2023-07-07 12:41:47 cd ~/.config/nvim
+   16  2023-07-07 12:41:47 cd ~/.config/nvim
+   17  2023-07-07 12:41:47 sudo apt install awesome kitty
+   18  2023-07-07 12:41:47 sudo reboot
+   19  2023-07-07 12:41:47 ls
+   20  2023-07-07 12:41:47 mkdir Git
+   21  2023-07-07 12:41:47 git init
+   22  2023-07-07 12:41:47 ls
+   23  2023-07-07 12:41:47 touch 1.py
+   24  2023-07-07 12:41:47 git add 1.py
+   25  2023-07-07 12:41:47 git commit -m "Created first file 1.py"
+   26  2023-07-07 12:41:47 git config --global user.name "Ashish"
+   27  2023-07-07 12:41:47 git config --global user.email "ashish.vatsn@gmail.com"
+   28  2023-07-07 12:41:47 git commit -m "Created first file 1.py"
+   29  2023-07-07 12:41:47 ls
+   30  2023-07-07 12:41:47 git clone https://github.com/vicariousashish/LearningPython.git
+   31  2023-07-07 12:41:47 ls
+   32  2023-07-07 12:41:47 cd LearningPython/
+   33  2023-07-07 12:41:47 ls
+   34  2023-07-07 12:41:47 git init
+   35  2023-07-07 12:41:47 bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"
+   36  2023-07-06 22:41:57 cat .bashrc.omb-backup-20230706223950
+   37  2023-07-06 22:43:59 sudo apt install gcc
+   38  2023-07-06 22:49:16 cd LearningPython/
+   39  2023-07-06 22:55:32 sudo apt --purge remove vim
+   40  2023-07-06 22:55:51 sudo apt autoremove
+   41  2023-07-06 22:55:59 sudo reboot
+   42  2023-07-06 22:57:19 sudo apt install nvim
+   43  2023-07-06 22:58:29 sudo snap install nvim
+   44  2023-07-06 23:02:16 cd LearningPython/
+   45  2023-07-06 23:03:19 vim ex18.py
+   46  2023-07-06 23:03:24 nvim ex18.py
+   47  2023-07-06 23:06:42 git commit . -m "Added everything"
+   48  2023-07-06 23:45:43 ip a
+   49  2023-07-06 23:48:38 git --ver
+   50  2023-07-06 23:48:43 git --version
+   51  2023-07-07 00:20:16 ls
+   52  2023-07-07 12:53:30 git config --global --list
+   53  2023-07-07 12:53:47 nvim git config --global --list
+   54  2023-07-07 12:55:13 git lolsg --oneline
+   55  2023-07-07 12:55:43 git shoe 0b719bb
+   56  2023-07-07 12:58:55 git commit -a V0.0 0b719bb -m "Added Version Tag 0.0"
+   57  2023-07-07 12:59:11 git tag -a V0.0 0b719bb -m "Added Version Tag 0.0"
+   58  2023-07-07 12:59:44 git show 0b719bb
+   59  2023-07-07 14:17:16 nvim .bashshrc
+   60  2023-07-07 14:17:30 ls -la
+   61  2023-07-07 14:17:44 nano .bashrc
+   62  2023-07-07 14:17:54 nvim .bashrc
+   63  2023-07-07 14:19:04 cat general.aliases.sh
+   64  2023-07-07 14:19:28 nvim general.aliases.sh
+   65  2023-07-07 14:36:07 source .bashrc
+   66  2023-07-07 14:36:19 vim .bashrc
+   67  2023-07-07 15:22:14 vim commit_script.sh
+   68  2023-07-07 15:26:07 mv commit_script.sh commit_everything_script.sh
+   69  2023-07-07 15:26:30 git add commit_everything_script.sh
+   70  2023-07-07 15:27:32 chmod 744 commit_everything_script.sh
+   71  2023-07-07 15:27:37 ./commit_everything_script.sh
+   72  2023-07-07 15:27:44 git ststus
+   73  2023-07-07 23:02:00 nvim
+   74  2023-07-07 23:04:08 cd G
+   75  2023-07-07 23:04:21 vim 1.py
+   76  2023-07-07 23:18:05 git commit . -m "modified 1.py"
+   77  2023-07-07 23:22:17 touch 2.py
+   78  2023-07-07 23:22:27 vim 2.py
+   79  2023-07-07 23:23:49 git add 2.py
+   80  2023-07-07 23:24:05 git commit -m "Added 2.py"
+   81  2023-07-07 23:24:47 git show 44cabc5
+   82  2023-07-07 23:25:15 vim 2.py
+   83  2023-07-07 23:26:07 git commit -a
+   84  2023-07-07 23:26:33 git commit -am "Modified 2.py"
+   85  2023-07-07 23:26:51 git log --oneline
+   86  2023-07-07 23:39:03 git log --pretty --oneline
+   87  2023-07-07 23:39:32 vim ~/.bashrc
+   88  2023-07-07 23:40:13 cd aliases/
+   89  2023-07-07 23:40:15 ll
+   90  2023-07-07 23:40:28 vim general.aliases.sh
+   91  2023-07-07 23:41:14 cd ..
+   92  2023-07-07 23:41:40 cd .oh-my-bash/
+   93  2023-07-07 23:42:49 git commit -m "Added alias for vim -> nvim"
+   94  2023-07-07 23:43:05 cd
+   95  2023-07-07 23:43:11 cd Git/
+   96  2023-07-07 23:44:28 vim .gitignore
+   97  2023-07-07 23:45:26 git add .
+   98  2023-07-07 23:45:44 git commit -m "Created .gitignore file."
+   99  2023-07-07 23:45:50 git status
+  100  2023-07-07 23:45:55 git log
+  101  2023-07-07 23:46:06 git log --oneline
+  102  2023-07-07 23:53:16 vim
+ ashish   master  ~/Git  s
+bookmark name required
+ ashish   master  ~/Git  ls
+1.py  2.py  commit_everything_script.sh
+ ashish   master  ~/Git  cd
+ ashish  ~  ls
+Git  LearningPython  snap
+ ashish  ~  cd G
+GLOBIGNORE  GROUPS      Git/
+ ashish  ~  cd Git/
+/home/ashish/Git
+ ashish   master  ~/Git  ll
+total 20K
+drwxr-xr-x 8 ashish ashish 4.0K Jul  8 00:38 .git/
+-rw-r--r-- 1 ashish ashish   24 Jul  7 23:45 .gitignore
+-rw-r--r-- 1 ashish ashish   60 Jul  7 23:05 1.py
+-rw-r--r-- 1 ashish ashish   64 Jul  7 23:25 2.py
+-rwxr--r-- 1 ashish ashish   59 Jul  7 15:25 commit_everything_script.sh*
+ ashish   master  ~/Git  vim .git
+.git/       .gitignore
+ ashish   master  ~/Git  vim .gitignore
+ ashish   master  ~/Git  mkdir test
+mkdir: created directory 'test'
+ ashish   master  ~/Git  ls
+1.py  2.py  commit_everything_script.sh  test
+ ashish   master  ~/Git  git status
+On branch master
+nothing to commit, working tree clean
+ ashish   master  ~/Git  mkdir Work
+mkdir: created directory 'Work'
+ ashish   master  ~/Git  git status
+On branch master
+nothing to commit, working tree clean
+ ashish   master  ~/Git  ls
+1.py  2.py  Work  commit_everything_script.sh  test
+ ashish   master  ~/Git  touch 3.py
+ ashish   master ?:1  ~/Git  git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        3.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+ ashish   master ?:1  ~/Git  git add .
+ ashish   master S:1  ~/Git  git commit -m "Created 3.py"
+[master 26030d8] Created 3.py
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 3.py
+ ashish   master  ~/Git  git status
+On branch master
+nothing to commit, working tree clean
+ ashish   master  ~/Git  ls
+1.py  2.py  3.py  Work  commit_everything_script.sh  test
+ ashish   master  ~/Git  mkdir Aman
+mkdir: created directory 'Aman'
+ ashish   master  ~/Git  git status
+On branch master
+nothing to commit, working tree clean
+ ashish   master  ~/Git  tiuch 4.py
+Command 'tiuch' not found, did you mean:
+  command 'touch' from deb coreutils (8.32-4.1ubuntu1)
+Try: sudo apt install <deb name>
+ ashish   master  ~/Git  127  touch 4.py
+ ashish   master ?:1  ~/Git  git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        4.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+ ashish   master ?:1  ~/Git  git add .
+ ashish   master S:1  ~/Git  git commit -m 4.py
+[master a75b2b1] 4.py
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 4.py
+ ashish   master  ~/Git  git commit -m "Created 4.py"
+On branch master
+nothing to commit, working tree clean
+ ashish   master  ~/Git  1  git status
+On branch master
+nothing to commit, working tree clean
+ ashish   master  ~/Git  ls
+1.py  2.py  3.py  4.py  Aman  Work  commit_everything_script.sh  test
+ ashish   master  ~/Git  touch test/test1.py
+ ashish   master  ~/Git  ls test/
+test1.py
+ ashish   master  ~/Git  cd Aman/
+/home/ashish/Git/Aman
+ ashish   master  ~/Git/Aman  touch aman.py
+ ashish   master ?:1  ~/Git/Aman  cd ..
+ ashish   master ?:1  ~/Git  git A
+add       am        apply     archive
+ ashish   master ?:1  ~/Git  git add .
+ ashish   master S:1  ~/Git  git commit -m "Testing file tracking inside a subdirectory. Created aman1.py inside Aman subdir."
+[master 7224bc0] Testing file tracking inside a subdirectory. Created aman1.py inside Aman subdir.
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Aman/aman.py
+ ashish   master  ~/Git  git log
+ ashish   master  ~/Git  git status
+On branch master
+nothing to commit, working tree clean
+ ashish   master  ~/Git  ls
+1.py  2.py  3.py  4.py  Aman  Work  commit_everything_script.sh  test
+ ashish   master  ~/Git  git log --oneline
+ ashish   master  ~/Git  git tag -a V0.1 dc9fcf7 -m "Version 0.1 created."
+ ashish   master  ~/Git  git log --oneline
+ ashish   master  ~/Git  git show V0.1
+ ashish   master  ~/Git  git remote add origin
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+ ashish   master  ~/Git  129  git remote add origin https://github.com/vicariousashish/Git.git
+ ashish   master  ~/Git  git remote -V
+error: unknown switch `V'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+ ashish   master  ~/Git  129  git remote -v
+origin  https://github.com/vicariousashish/Git.git (fetch)
+origin  https://github.com/vicariousashish/Git.git (push)
+ ashish   master  ~/Git  git branch
+ ashish   master  ~/Git  git branch -M main
+ ashish   main  ~/Git  git branch
+ ashish   main  ~/Git  git push -u origin main
+Username for 'https://github.com': vicariousashish
+Password for 'https://vicariousashish@github.com':
+Enumerating objects: 25, done.
+Counting objects: 100% (25/25), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (25/25), 2.28 KiB | 167.00 KiB/s, done.
+Total 25 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/vicariousashish/Git.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+ ashish   main  ~/Git  git fetch origin main
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 658 bytes | 94.00 KiB/s, done.
+From https://github.com/vicariousashish/Git
+ * branch            main       -> FETCH_HEAD
+   7224bc0..1ebf62d  main       -> origin/main
+ ashish   main ↓1  ~/Git  git merge
+Updating 7224bc0..1ebf62d
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+ ashish   main  ~/Git  ls
+1.py  2.py  3.py  4.py  Aman  README.md  Work  commit_everything_script.sh  test
+ ashish   main  ~/Git  git pull origin main
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 719 bytes | 102.00 KiB/s, done.
+From https://github.com/vicariousashish/Git
+ * branch            main       -> FETCH_HEAD
+   1ebf62d..4cc9c11  main       -> origin/main
+Updating 1ebf62d..4cc9c11
+Fast-forward
+ from_github.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 from_github.txt
+ ashish   main  ~/Git  ls
+1.py  2.py  3.py  4.py  Aman  README.md  Work  commit_everything_script.sh  from_github.txt  test
+ ashish   main  ~/Git  git branch
+ ashish   main  ~/Git  git branch -M master
+ ashish   master → main  ~/Git  git branch
+ ashish   master → main  ~/Git  git branch M main
+fatal: Not a valid object name: 'main'.
+ ashish   master → main  ~/Git  128  git branch -M main
+ ashish   main  ~/Git  git branch
+ ashish   main  ~/Git  git checkout master
+error: pathspec 'master' did not match any file(s) known to git
